@@ -2,7 +2,8 @@ close all;clc;
 %% init outline data
 A2=textread('H15TCER.413');
 A2=A2(2:end,2:end);
-A2=A2(:);
+B = A2';
+A2=B(:);
 figure;
 theta = [1:3600]/3600*2*pi;
 subplot(2,1,1);plot(theta,A2);title('ÇúÖáÂÖÀªÍ¼');ylabel('¾¶ÏòÎó²îÖµ');xlabel('²âÁ¿Î»ÖÃ/rad');

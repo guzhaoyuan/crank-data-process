@@ -17,21 +17,22 @@ fc1=20;fc2=280;
 wn = [fc1/(fs/2) fc2/(fs/2)];
 [b,a]=butter(4,wn);
 y_band = filter(b,a,A1(m:n,2));
-subplot(2,3,2);plot(A1(m:n,1),y_power_high);title('选取的机床功率段');ylabel('功率');xlabel('时间/t');
+subplot(2,3,2);plot(A1(m:n,1),y_band);title('选取的机床功率段');ylabel('功率');xlabel('时间/t');
 
 %% fft for power
 N=size(A1(m:n),2);
 b=0:N-1;
 c=1:N/12.5;%max show f
 f_power=c*fs/N;
-fft_power = abs(y_power_fft(1:N/12.5));
 y_power_fft = fft(y_band);
+fft_power = abs(y_power_fft(1:N/12.5));
 subplot(2,3,3);plot(f_power,fft_power);title('机床功率FFT频谱图');ylabel('频域幅值');xlabel('频率/Hz');
 %% read outline data from txt
 
 A2=textread('H15TCER.413');
 A2=A2(2:end,2:end);
-A2=A2(:);
+B = A2';
+A2=B(:);
 subplot(2,3,4);plot([1:size(A2,1)],A2);title('曲轴轮廓图');ylabel('径向误差值');xlabel('测量位置/rad');
 
 %% filter for outline
