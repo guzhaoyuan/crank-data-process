@@ -13,6 +13,10 @@ plot(A2(:,1)-5,A2(:,2),'DisplayName','15');
 hold on;
 plot(A3(:,1)-26,A3(:,2),'DisplayName','16');
 hold on;
+
+%感觉16、17是修整的分界线
+%14、15曲线一致，18、19曲线也一致，建议取14和19进行分析
+
 plot(A4(:,1),A4(:,2),'DisplayName','17');
 hold on;
 plot(A5(:,1)-45.5,A5(:,2),'DisplayName','18');
