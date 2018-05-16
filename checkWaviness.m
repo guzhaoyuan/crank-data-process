@@ -19,4 +19,4 @@ f=m*Fs/N;
 %% fft outline and plot
 Y = fft(A2);
 Y = Y(1:1800);
-subplot(2,1,2);plot(f,abs(Y));title('FFTÆµÆ×Í¼');ylabel('ÆµÓò·ùÖµ');xlabel('ÆµÂÊ/Hz');
+subplot(2,1,2);plot(f(1:300),abs(Y(1:300)));title('FFTÆµÆ×Í¼');ylabel('ÆµÓò·ùÖµ');xlabel('ÆµÂÊ/Hz');
