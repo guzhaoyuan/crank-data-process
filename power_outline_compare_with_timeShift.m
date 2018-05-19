@@ -6,7 +6,7 @@ A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);
 fg1 = figure('Name','Overview');
-fg2 = figure('Name','Overview');
+fg2 = figure('Name','Compare');
 figure(fg1);
 subplot(2,3,4);plot([1:size(A2,1)],A2);title('ÇúÖáÂÖÀªÍ¼');ylabel('¾¶ÏòÎó²îÖµ');xlabel('²âÁ¿Î»ÖÃ/rad');
 

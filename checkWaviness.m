@@ -1,6 +1,6 @@
 close all;clc;
 %% init outline data
-A2=textread('17.413');
+A2=textread('14.413');
 A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);
@@ -19,4 +19,4 @@ f=m*Fs/N;
 %% fft outline and plot
 Y = fft(A2);
 Y = Y(1:1800);
-subplot(2,1,2);plot(f(1:300),abs(Y(1:300)));title('FFTÆµÆ×Í¼');ylabel('ÆµÓò·ùÖµ');xlabel('ÆµÂÊ/Hz');
+subplot(2,1,2);plot(f(1:150),abs(Y(1:150)));title('FFTÆµÆ×Í¼');ylabel('ÆµÓò·ùÖµ');xlabel('ÆµÂÊ/Hz');
