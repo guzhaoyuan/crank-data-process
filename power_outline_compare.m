@@ -29,7 +29,7 @@ fft_power = abs(y_power_fft(1:N/12.5));
 subplot(2,3,3);plot(f_power,fft_power);title('机床功率FFT频谱图');ylabel('频域幅值');xlabel('频率/Hz');
 %% read outline data from txt
 
-A2=textread('H15TCER.413');
+A2=textread('16.413');
 A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);

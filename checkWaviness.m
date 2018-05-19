@@ -1,6 +1,6 @@
 close all;clc;
 %% init outline data
-A2=textread('H15TCER.413');
+A2=textread('16.413');
 A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);
