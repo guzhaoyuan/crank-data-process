@@ -1,6 +1,6 @@
 close all;clc;%clear;
 %% read power data from excel
-% A1=xlsread('19TH.xlsx');
+% A1=xlsread('power_data/19TH.xlsx');
 a = A1(:,1);
 figure;
 subplot(2,3,1);plot(A1(:,1),A1(:,2));title('机床功率图');ylabel('功率');xlabel('时间/t');
@@ -32,7 +32,7 @@ subplot(2,3,3);plot(f_power,fft_power);title('机床功率FFT频谱图');ylabel('频域幅
 
 %% read outline data from txt
 
-A2=textread('19.413');
+A2=textread('outline_data/19.413');
 A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);

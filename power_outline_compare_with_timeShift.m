@@ -1,7 +1,7 @@
 close all;clc;%clear;
 %% read outline data from txt
 
-A2=textread('19.413');
+A2=textread('outline_data/19.413');
 A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);
@@ -25,7 +25,7 @@ y_outline_fft = fft(y_outline_high);
 subplot(2,3,6);plot(f_outline(1:500),abs(y_outline_fft(1:500)));title('曲轴轮廓FFT频谱图');ylabel('频域幅值');xlabel('频率/Hz');
 
 %% read power data from excel
-% A1=xlsread('19TH.xlsx');
+% A1=xlsread('power_data/19TH.xlsx');
 A = A1(:,1);
 
 subplot(2,3,1);plot(A1(:,1),A1(:,2));title('机床功率图');ylabel('功率');xlabel('时间/t');
