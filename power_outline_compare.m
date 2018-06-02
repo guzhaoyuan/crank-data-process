@@ -4,7 +4,6 @@ close all;clc;%clear;
 a = A1(:,1);
 figure;
 subplot(2,3,1);plot(A1(:,1),A1(:,2));title('机床功率图');ylabel('功率');xlabel('时间/t');
-
 %% find the power focus area
 endTime = 40;
 duration = 2;%should be 1.333
