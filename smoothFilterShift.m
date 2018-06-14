@@ -39,7 +39,7 @@ y1 = y1 - mean(y1);
 subplot(2,1,1);plot([1:size(x1,1)]/3600*2*pi, y1);
 
 %% 
-A2=textread('outline_data/14.413');
+A2=textread('outline_data/19.413');
 A2=A2(2:end,2:end);
 B = A2';
 A2=B(:);
