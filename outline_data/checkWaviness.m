@@ -1,4 +1,4 @@
-close all;clc;
+clc;
 %% init outline data
 A2=textread('14.413');
 A2=A2(2:end,2:end);
@@ -15,8 +15,13 @@ m=1:N/2;
 f=m*Fs/N;
 %% settle filter param & apply band filter
 % fc1=200; fc2=400;
-
+fs = 3600;
+fc1=20;fc2=400;
+wn = [fc1/(fs/2) fc2/(fs/2)];
+[b,a]=butter(4,wn);
+y_outline_high=filter(b,a,A2);
+%subplot(2,3,5);plot([1:size(A2,1)],y_outline_high);title('ÂË²¨ºóÇúÖáÂÖÀªÍ¼');ylabel('¾¶ÏòÎó²îÖµ');xlabel('²âÁ¿Î»ÖÃ/rad');
 %% fft outline and plot
-Y = fft(A2);
+Y = fft(y_outline_high);
 Y = Y(1:1800);
-subplot(2,1,2);plot(f(1:150),abs(Y(1:150)));title('FFTÆµÆ×Í¼');ylabel('ÆµÓò·ùÖµ');xlabel('ÆµÂÊ/Hz');
+subplot(2,1,2);plot(f(1:300),abs(Y(1:300)));title('FFTÆµÆ×Í¼');ylabel('ÆµÓò·ùÖµ');xlabel('ÆµÂÊ/Hz');
