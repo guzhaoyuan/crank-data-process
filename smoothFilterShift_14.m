@@ -2,7 +2,7 @@ close all;clc;%clear;
 %% read power data from excel
 % A1=xlsread('power_data/14TH.xlsx');
 a = A1(:,1);
-endTime = 83.65;
+endTime = 83.6;
 m = find(a>81,1,'first');%for 14
 n = find(a<endTime,1,'last');%for 14
 figure;

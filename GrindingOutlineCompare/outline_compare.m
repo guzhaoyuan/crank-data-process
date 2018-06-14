@@ -1,3 +1,4 @@
+%compare junker and jiuzhou outline data
 close all;clc;
 %% init param
 theta = [1:3600]/3600*2*pi;

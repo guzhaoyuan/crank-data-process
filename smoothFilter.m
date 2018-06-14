@@ -1,3 +1,4 @@
+%test filter for power, using SmoothingSpline
 close all;clc;%clear;
 %% read power data from excel
 % A1=xlsread('power_data/19TH.xlsx');

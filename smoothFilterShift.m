@@ -1,3 +1,4 @@
+% shift outline to fit power for 19th data
 close all;clc;%clear;
 %% read power data from excel
 % A1=xlsread('power_data/19TH.xlsx');
